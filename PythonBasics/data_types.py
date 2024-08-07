@@ -47,3 +47,14 @@ print("hello " + " Chris")
 
 print(type(str(500))) # -> str
 print(type(int(str(500)))) # -> int
+
+###Booleans
+#Boolean value can be True or False
+#bool(0) is false and bool(1) is true
+name = "Chris Bui"
+is_cool = False
+print(f"{name} is {is_cool}")
+is_cool = True
+print(name + " " + str(is_cool))
+print(bool(0))
+print(bool(1))
