@@ -66,4 +66,28 @@ reverseList = list1[:]
 reverseList.reverse()
 # print(list1)
 print(sortedList) 
-print( reverseList)
+print(reverseList)
+
+
+print(list(range(1, 100)))
+print(list(range(100)))
+
+#join() String concatenation of string and a list
+sentence = "!";
+new_sentence = sentence.join(["Hi", "my", "name", "is", "jojo"])
+print(sentence) # Hi!my!name!is!jojo. 
+print(" ".join(["Hi", "my", "name", "is", "JOJO"])) # Hi my name is JOJO
+
+# LIST UNPACKING
+basket_new = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+a, b, c = [1, 2, 3]
+print(a) # 1
+print(b) # 2
+print(c) # 3
+
+a1, b1, c1, *other = basket_new
+print(other) # 4, 5, 6, 7, 8, 9
+a2, b2, c2, *other, d = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(d) # 9
+print(other) #[4, 5, 6, 7, 8]
+
