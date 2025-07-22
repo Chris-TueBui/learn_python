@@ -43,7 +43,7 @@ print(longString)
 
 # STRING CONCATENATION
 print("hello " + " Chris")
-# Cant do print("hello " + 5). String cant be operated with integer
+# Cant do print("hello " + 5). String cant be operated with integer. Can do something like print("hello " + str(5))
 
 print(type(str(500))) # -> str
 print(type(int(str(500)))) # -> int
@@ -116,6 +116,10 @@ print(myList[0]['a'][2])
 dict2 = {
     123: [1, 2, 3],
     True: 'Hello',
+    'a' : {
+        'key': 'value',
+        123: 'TEST',
+    }
 }
 print(dict2[123])
 print(dict2[True])

@@ -11,7 +11,7 @@ print(amazonCart[0])
 
 ### LIST SLICING
 print(amazonCart)
-# print(amazonCart[0:2:2])
+print(amazonCart[0:2:2])
 amazonCart[0] = "laptop" #List is mutable. Meaning, it can change unlike String.
 print(amazonCart[1:3])
 print(amazonCart)
@@ -39,11 +39,11 @@ new_list = basket.append("Chris Bui")
 # If I do print new_list right here, the result is None because the append() doesnt return a new list.
 
 # Adding
-# basket.insert(3, "Chris bui")
-# new_list = basket.extend([100])
+basket.insert(3, "Chris bui")
+new_list = basket.extend([100]) # .extend does not return a new list.
 
-# print(basket) 
-# print(new_list)
+print("Basket: " + str(basket)) 
+print("New list: " + str(new_list))
 
 #Removing
 # basket.pop() # Removing the object at the last index. Pop does return whatever the object was removed.
@@ -62,7 +62,7 @@ print(listStr.count("a")) # Count how many times the letter appears.
 list1 = ["a", "s", "r", "t", "o", "n"]
 # list1.sort()
 sortedList = sorted(list1) # Create a new array but sorted 
-reverseList = list1[:]
+reverseList = list1[:] # Create a new list.
 reverseList.reverse()
 # print(list1)
 print(sortedList) 
@@ -73,7 +73,7 @@ print(list(range(1, 100)))
 print(list(range(100)))
 
 #join() String concatenation of string and a list
-sentence = "!";
+sentence = "!"
 new_sentence = sentence.join(["Hi", "my", "name", "is", "jojo"])
 print(sentence) # Hi!my!name!is!jojo. 
 print(" ".join(["Hi", "my", "name", "is", "JOJO"])) # Hi my name is JOJO
