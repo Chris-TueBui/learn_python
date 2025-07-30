@@ -52,3 +52,5 @@ print(example_list[::2]) # Slicing from index 0 to the end, with step 2. In this
 #1, 3, 5
 print(example_list[::-1]) # Reverse the list
 #reverse the list
+
+print(example_list.item())
