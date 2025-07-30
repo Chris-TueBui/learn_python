@@ -9,9 +9,18 @@ amazonCart = [
     "grapes"]
 print(amazonCart[0])
 
+##how to reverse
+#syntax: list[start:end:step] 
+#for step: negative means reverse the list
+#for step: postive means normal order.
+#if not provided, it will take the whole list.
+#if step is not provided, it will take the whole list, default step is 1.
+print(amazonCart[::-1]) # Reverse the list
+print(amazonCart[::-2]) # Reverse the list with step 2
+
 ### LIST SLICING
 print(amazonCart)
-print(amazonCart[0:2:2])
+print(amazonCart[0:2:2]) # Slicing from index 0 to 2, with step 2. In this case, exclude index 2.
 amazonCart[0] = "laptop" #List is mutable. Meaning, it can change unlike String.
 print(amazonCart[1:3])
 print(amazonCart)
@@ -20,7 +29,7 @@ new_cart = amazonCart;
 new_cart = amazonCart[:] # Create a copy using slicing. And these 2 points to different objects in memory
 new_cart[0] = "gum"
 print(new_cart) # ["gum", "sunglasses", "toys", "grapes"]
-print(amazonCart) # ["gum", "sunglasses", "toys", "grapes"]
+print(amazonCart) # ["laptop", "sunglasses", "toys", "grapes"]
 
 ### MATRIX
 matrix = [
@@ -42,6 +51,18 @@ new_list = basket.append("Chris Bui")
 basket.insert(3, "Chris bui")
 new_list = basket.extend([100]) # .extend does not return a new list.
 
+#I can also use insert(): has to specify the index.
+basket.insert(0, "Chris Bui") # Insert at index 0
+#I can also use extend(): has to specify the list.
+basket.extend(["Chris Bui", "Chris Bui 123"]) # Extend the list with multiple elements
+
+#pop: pop() removes the last element in the list.
+basket.pop() # Removing the object at the last index. Pop does return whatever the object was removed.
+#if pop has an index, it will remove the object at that index.
+basket.pop(0) # Removing the object at index 0.
+basket.remove("Chris Bui") # Removing the specified object
+
+
 print("Basket: " + str(basket)) 
 print("New list: " + str(new_list))
 
@@ -54,13 +75,18 @@ print("New list: " + str(new_list))
 
 listStr = ["a", "b", "c", "d", "e"]
 
-# print(listStr.index("d", 0, 1))
-print("d" in listStr)
+print(listStr.index("d", 0, 1))
+#index() returns the index of the first occurrence of the specified value.
+#index() can take 2 optional parameters: start and end. It will search for the value in the specified range.
+print(listStr.index("d", 0, 5)) # Search for "d" from index 0 to index 5.
+print("d" in listStr) #true if "d" is in the list, false otherwise.
 print("i" in "Hi my name is Ian")
 print(listStr.count("a")) # Count how many times the letter appears.
 
 list1 = ["a", "s", "r", "t", "o", "n"]
 # list1.sort()
+#sort() sorts the list in place and returns None. Modiefies the original list.
+#sorted() creates a new sorted list from the elements of any iterable. Does not modify the original list
 sortedList = sorted(list1) # Create a new array but sorted 
 reverseList = list1[:] # Create a new list.
 reverseList.reverse()
@@ -69,8 +95,12 @@ print(sortedList)
 print(reverseList)
 
 
-print(list(range(1, 100)))
-print(list(range(100)))
+print(list(range(1, 100))) #starts from 1 to 99. Exclude whatever is at the end.
+print(list(range(100))) #starts from 0 to 99. Exclude whatever is at the end.
+#range can also take a step parameter.
+print(list(range(1, 100, 2))) #starts from 1 to 99, with step 2. Exclude whatever is at the end.
+#range can also take a negative step parameter.
+print(list(range(100, 1, -2))) #starts from 100 to 2, with step -2. Exclude whatever is at the end. 
 
 #join() String concatenation of string and a list
 sentence = "!"

@@ -69,6 +69,7 @@ print(weapons) #None
 # Data type and data structure.
 # Has something like key-value pair. Denote as below
 # It is un-ordered key-pair. Not near each other in memory
+# Dictionary is mutable, meaning it can change.
 dictionary = {
     'a': 1,
     'b': 2,
@@ -101,9 +102,10 @@ myList = [
 print(myList[0]['a'][2])
 
 ### WHEN TO USE LIST AND WHEN TO USE DICTIONARY
-# list has order indexes
+# list has order indexes and dictionary has no indexes.
+# List is mutable, meaning it can change. Dictionary is also mutable.
 # dictionary has no order.
-# Dictionary can store more elements then list. While list has a fixed size.
+# Dictionary can store more elements then list
 # List has index. While dictionary holds a lot more information.
 # List store indexes and its value. Dictionary can be used to store the key and value pair.
 # Dictionary value can be any data types
