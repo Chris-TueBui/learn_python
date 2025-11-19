@@ -1,15 +1,16 @@
 def someRandomStuff():
     pass
 
-#Method:
+# Method:
 # To call it, use "."
 # Has to be owned by soemthing.
+
 
 'hello'.capitalize()
 print('hello'.capitalize())
 
 
-#Doc string:
+# Doc string:
 def test(a):
     '''
     INFO: this function tests and prints param a
@@ -17,18 +18,23 @@ def test(a):
     '''
     print(a)
 
+
 test('!!!')
 help(test)
 print(test.__doc__)
 
-#scope: what variables do I have access to?
+# scope: what variables do I have access to?
+
+
 def someFunc():
     total = 100
 
-#It checks in local function first, then check global, then check built in python function
+# It checks in local function first, then check global, then check built in python function
 
-#Global keyword
+
+# Global keyword
 total = 0
+
 
 def count():
     # We can use something like this syntax:
@@ -41,19 +47,23 @@ def count1(total):
     total += 1
     return total
 
+
 print(count())
 print(count1(total))
 
 # non-global keyword:
-#refer to the parent local. Parent local meaning a function inside a function
-#If in the example below, we dont use nonlocal, then the outer is still "local"
+# refer to the parent local. Parent local meaning a function inside a function
+# If in the example below, we dont use nonlocal, then the outer is still "local"
+
+
 def outer():
     x = "local"
+
     def inner():
         nonlocal x
         x = "nonlocal"
         print("inner: ", x)
-    
+
     inner()
     print("Outer: ", x)
 
